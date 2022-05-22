@@ -2,13 +2,13 @@ package by.bsu.mobile.entity;
 
 public class MobileProperties {
     private String model;
-    private Long accumCapacity;
+    private Integer accumCapacity;
     private Double screenSize;
 
     public MobileProperties() {
     }
 
-    public MobileProperties(String model, Long accumCapacity, Double screenSize) {
+    public MobileProperties(String model, Integer accumCapacity, Double screenSize) {
         this.model = model;
         this.accumCapacity = accumCapacity;
         this.screenSize = screenSize;
@@ -22,11 +22,11 @@ public class MobileProperties {
         this.model = model;
     }
 
-    public Long getAccumCapacity() {
+    public Integer getAccumCapacity() {
         return accumCapacity;
     }
 
-    public void setAccumCapacity(Long accumCapacity) {
+    public void setAccumCapacity(Integer accumCapacity) {
         this.accumCapacity = accumCapacity;
     }
 
