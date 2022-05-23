@@ -1,4 +1,5 @@
 public class Main {
+    /* 10.	Умножить два многочлена заданной степени, если коэффициенты многочленов хранятся в различных списках. */
     public static void main(String[] args) {
         Polynom p2 = new Polynom(1,-2,3);
         Polynom p1 = new Polynom(2,1);
