@@ -1,14 +1,18 @@
 import java.util.Arrays;
+import java.util.List;
 
 public class Polynom {
-    private Term [] plmn;
+    private Term[] plmn;
 
-    Polynom(double... factors) {
-        plmn = new Term[factors.length];
-        for (int i = factors.length - 1; i >= 0; i--) {
-            plmn[factors.length - i - 1] = new Term(factors[i], i);
+    Polynom(List<Double> factors) {
+        plmn = new Term[factors.size()];
+
+        double[] arr = factors.stream().mapToDouble(Double::doubleValue).toArray();
+        for (int i = arr.length - 1; i >= 0; i--) {
+            plmn[arr.length - i - 1] = new Term(arr[i], i);
         }
     }
+
 
     Polynom(Term[] plmn) {
         this.plmn = plmn;
@@ -28,5 +32,12 @@ public class Polynom {
 
     public int getLengthPlmn() {
         return plmn.length;
+    }
+
+    @Override
+    public String toString() {
+        return "Polynom{" +
+                "plmn=" + Arrays.toString(plmn) +
+                '}';
     }
 }
