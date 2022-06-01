@@ -1,5 +1,6 @@
 import by.bsu.lab4a.action.PuppyOperator;
 import by.bsu.lab4a.entity.Puppy;
+import by.bsu.lab4a.exception.FileException;
 import by.bsu.lab4a.reader.DataReader;
 import org.testng.Assert;
 
@@ -7,7 +8,7 @@ import java.io.FileNotFoundException;
 
 public class Test {
     @org.testng.annotations.Test
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException,FileException {
         DataReader dataReader = new DataReader();
         Puppy puppy = new Puppy();
         puppy = dataReader.readFromFile("src/main/resources/data/puppy.txt");
